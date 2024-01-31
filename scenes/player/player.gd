@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends CharacterBody2D 
 
 @export var main_speed = 30
 @export var terminal_velocity = 300
