@@ -8,8 +8,8 @@ size = Vector2(20, 3.75)
 
 [node name="SpikeyBoi" type="Area2D"]
 scale = Vector2(0.8, 0.8)
-collision_layer = 255
-collision_mask = 255
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_s7rx3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -22,8 +22,8 @@ scale = Vector2(1.1, 1.1)
 polygon = PackedVector2Array(-7.5, 7.5, -5.68182, -2.27273, -2.5, 6.25, 0, -6.81818, 3.75, 2.5, 5, -1.25, 7.5, 7.5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 128
-collision_mask = 129
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-9.68575e-07, 6.875)

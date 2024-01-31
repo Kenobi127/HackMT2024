@@ -476,8 +476,8 @@ colors = PackedColorArray(0.880983, 0.956011, 0.815313, 0.976471, 0.476978, 0.64
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
-collision_layer = 129
-collision_mask = 129
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_lsbkp")
 ice_drag = 3
 metadata/player = false
@@ -488,7 +488,7 @@ metadata/player = false
 position = Vector2(0, -17.5)
 sprite_frames = ExtResource("1_fgoj4")
 animation = &"idle"
-frame = 3
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -522,12 +522,14 @@ target_position = Vector2(0, 15)
 collision_mask = 2
 
 [node name="CrouchShapeCast2D" type="ShapeCast2D" parent="."]
+visible = false
 position = Vector2(0, -10.5)
 shape = ExtResource("3_ruosv")
 target_position = Vector2(0, 0)
 max_results = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -15)
 shape = ExtResource("4_ces4e")
 

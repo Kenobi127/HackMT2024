@@ -12,11 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://dxoj4mt5ykacm" path="res://scenes/moving_platforms/moving_platform.tscn" id="8_erifn"]
 [ext_resource type="AudioStream" uid="uid://du1lhopglh5pd" path="res://assets/audio/level_music.wav" id="9_0xm86"]
 [ext_resource type="PackedScene" uid="uid://dcbfolw1aiu0o" path="res://scenes/flagpole/flagpole.tscn" id="11_owo2o"]
-[ext_resource type="PackedScene" uid="uid://cyyxrvbnx1o27" path="res://scenes/SkeletonEnemy/SkeletonEnemy.tscn" id="13_sye8x"]
+[ext_resource type="PackedScene" uid="uid://nwvsxdmblq2a" path="res://scenes/skeleton/skeleton.tscn" id="13_yyi8v"]
 
 [sub_resource type="Curve2D" id="Curve2D_hdyld"]
 _data = {
-"points": PackedVector2Array(-15.1453, -8.90899, 15.1453, 8.90899, 340, 167, 29.3997, -40.9813, -29.3997, 40.9813, 341, 281, 66.8174, 64.1447, -66.8174, -64.1447, 154, 323, -89.9808, 38.3086, 89.9808, -38.3086, 165, 127, -35.6359, -38.3086, 35.6359, 38.3086, 340, 167)
+"points": PackedVector2Array(-15.1453, -8.90899, 15.1453, 8.90899, 340, 167, 29.3997, -40.9813, -29.3997, 40.9813, 330.03, 284.028, 76.3418, 39.54, -76.3418, -39.54, 154, 323, -89.9808, 38.3086, 89.9808, -38.3086, 165, 127, -35.6359, -38.3086, 35.6359, 38.3086, 340, 167)
 }
 point_count = 5
 
@@ -40,13 +40,13 @@ point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_4yawn"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 149, 142, -281.275, 4.71937, 281.275, -4.71937, 403, -145, 0, 0, 0, 0, 640, 141, 262.397, 4.71937, -262.397, -4.71937, 404, -144, 0, 0, 0, 0, 149, 142)
+"points": PackedVector2Array(0, 0, 0, 0, 149, 142, -284.248, 0.557146, 284.248, -0.557146, 403, -145, 0, 0, 0, 0, 648.766, 145.594, 283.803, -0.0374579, -283.803, 0.0374579, 404, -144, 0, 0, 0, 0, 149, 142)
 }
 point_count = 5
 
 [sub_resource type="Curve2D" id="Curve2D_y250k"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 181, 142, 167.263, -1.28337, -167.263, 1.28337, 8, -36, 0, 0, 0, 0, -154, 146, -164.371, 1.7818, 164.371, -1.7818, 9, -36, 0, 0, 0, 0, 181, 142)
+"points": PackedVector2Array(0, 0, 0, 0, 194.182, 219.653, 167.263, -1.28337, -167.263, 1.28337, 8, -36, 0, 0, 0, 0, -186.364, 216.085, -164.371, 1.7818, 164.371, -1.7818, 9, -36, 0, 0, 0, 0, 194.182, 220.842)
 }
 point_count = 5
 
@@ -199,7 +199,7 @@ position = Vector2(863.75, -160)
 scale = Vector2(1, 1)
 
 [node name="SpikeyBoi26" parent="SpikeyBoi" instance=ExtResource("3_sc3re")]
-position = Vector2(4916.25, 190)
+position = Vector2(4916.25, 191.25)
 scale = Vector2(1, 1)
 
 [node name="SpikeyBoi27" parent="SpikeyBoi" instance=ExtResource("3_sc3re")]
@@ -354,32 +354,47 @@ motion_mirroring = Vector2(512, 0)
 position = Vector2(64, 35)
 texture = ExtResource("7_padvc")
 
-[node name="SkeletonEnemy" parent="." instance=ExtResource("13_sye8x")]
-position = Vector2(833, 125)
+[node name="Skeleton" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(489.44, 4)
 
-[node name="SkeletonEnemy2" parent="." instance=ExtResource("13_sye8x")]
-position = Vector2(870, -52)
+[node name="Skeleton2" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(805.666, 115.1)
 
-[node name="SkeletonEnemy3" parent="." instance=ExtResource("13_sye8x")]
-position = Vector2(1267, 138)
+[node name="Skeleton3" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(1269.43, 122.22)
 
-[node name="SkeletonEnemy4" parent="." instance=ExtResource("13_sye8x")]
-position = Vector2(1233, 394)
+[node name="Skeleton4" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(1259.14, 378)
 
-[node name="SkeletonEnemy5" parent="." instance=ExtResource("13_sye8x")]
-position = Vector2(2112, 87)
+[node name="Skeleton5" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(2061.56, 75.4)
 
-[node name="SkeletonEnemy6" parent="." instance=ExtResource("13_sye8x")]
-position = Vector2(3593, 381)
+[node name="Skeleton6" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(1803.23, -200.382)
 
-[node name="SkeletonEnemy7" parent="." instance=ExtResource("13_sye8x")]
-position = Vector2(3815, 24)
+[node name="Skeleton7" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(2314.92, 381.6)
 
-[node name="SkeletonEnemy8" parent="." instance=ExtResource("13_sye8x")]
-position = Vector2(4048, 229)
+[node name="Skeleton8" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(3064.37, 382.4)
 
-[node name="SkeletonEnemy9" parent="." instance=ExtResource("13_sye8x")]
-position = Vector2(5118, 49)
+[node name="Skeleton9" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(3700.04, 11.6)
+
+[node name="Skeleton10" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(3528.73, 365.22)
+
+[node name="Skeleton11" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(4078.66, 217.6)
+
+[node name="Skeleton12" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(4537.47, 155.9)
+
+[node name="Skeleton13" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(5084.4, 34.22)
+
+[node name="Skeleton14" parent="." instance=ExtResource("13_yyi8v")]
+position = Vector2(5005.11, 506.131)
 
 [node name="Path2D" parent="." instance=ExtResource("8_erifn")]
 position = Vector2(826, 53)
@@ -439,3 +454,18 @@ curve = SubResource("Curve2D_2lft6")
 stream = ExtResource("9_0xm86")
 volume_db = -15.277
 autoplay = true
+
+[connection signal="hurt_player" from="Skeleton" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton2" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton3" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton4" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton5" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton6" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton7" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton8" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton9" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton10" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton11" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton12" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton13" to="Player" method="_on_skeleton_hurt_player"]
+[connection signal="hurt_player" from="Skeleton14" to="Player" method="_on_skeleton_hurt_player"]

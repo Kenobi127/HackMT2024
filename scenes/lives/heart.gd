@@ -16,7 +16,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# find the heart that might not be full.
-	print(player.lives)
+	#print(player.lives)
 	var last_heart = floor(player.lives)
 
 	

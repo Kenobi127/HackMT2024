@@ -42,8 +42,8 @@ func _process(delta):
 		lives = max_lives
 		position = start_position
 		
-	print(position)
-	print(drag)
+	#print(position)
+	#print(drag)
 	#if Input.is_action_just_pressed("die"):
 		#win()
 	
@@ -89,7 +89,7 @@ func _physics_process(delta):
 			velocity.y = terminal_velocity
 	else:
 		jump_num = max_jumps #reset number of jumps if on floor	
-		if position.x > 200000000: #3580
+		if position.x > 3580: #3580
 			drag = ice_drag
 		else:
 			drag = normal_drag
@@ -197,3 +197,7 @@ func stand():
 		speed = main_speed #set speed to normal
 		cshape.shape = standing_cshape
 		cshape.position.y = -15
+
+
+func _on_skeleton_hurt_player():
+	hurt()
