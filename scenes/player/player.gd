@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var main_speed = 30
 @export var terminal_velocity = 300
 @export var normal_drag = 10
-@export var ice_drag = 5
 @export var gravity = 10
 @export var jump_velocity = 200
 @export var max_jumps = 2
@@ -44,6 +43,9 @@ func _process(delta):
 		
 	#print(position)
 	#print(drag)
+	#$RichTextLabel.set_text("Right key Pressed: " + str(Input.is_key_label_pressed(KEY_D)))
+		
+		
 	#if Input.is_action_just_pressed("die"):
 		#win()
 	
@@ -83,16 +85,11 @@ func win():
 func _physics_process(delta):
 	#falling mechanics
 	if !is_on_floor():
-		drag = normal_drag
 		velocity.y += gravity
 		if velocity.y > terminal_velocity: #implement terminal velocity
 			velocity.y = terminal_velocity
 	else:
 		jump_num = max_jumps #reset number of jumps if on floor	
-		if position.x > 3580: #3580
-			drag = ice_drag
-		else:
-			drag = normal_drag
 	
 	
 	#jumping mechanics
@@ -110,10 +107,7 @@ func _physics_process(delta):
 	#horizontal direction is between -1 and 1 both or neither is 0
 	var horizontal_direction = Input.get_action_strength("right") - Input.get_action_strength("left") 
 	if can_move:
-		if velocity.x*horizontal_direction>terminal_velocity*.75 && drag==ice_drag:
-			velocity.x += terminal_velocity * 0.01 * horizontal_direction
-		else:
-			velocity.x += speed * horizontal_direction #adds the speed times direction to velocity
+		velocity.x += speed * horizontal_direction #adds the speed times direction to velocity
 		velocity.x -= velocity.x * (drag*delta) 
 	else:
 		velocity.x = 0

@@ -481,18 +481,15 @@ collision_mask = 5
 script = ExtResource("1_lsbkp")
 metadata/player = false
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -65.8412
-offset_top = -61.7773
-offset_right = 81.1588
-offset_bottom = -38.7773
-theme_override_font_sizes/normal_font_size = 9
-theme_override_font_sizes/bold_font_size = 1
-theme_override_font_sizes/italics_font_size = 1
-theme_override_font_sizes/bold_italics_font_size = 1
-theme_override_font_sizes/mono_font_size = 1
-fit_content = true
-scroll_active = false
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = -43.8255
+offset_top = -51.317
+offset_right = -35.8255
+offset_bottom = -43.317
+text = "hello
+"
+placeholder_text = "
+"
 
 [node name="Lives" parent="." instance=ExtResource("2_73gsv")]
 
@@ -500,7 +497,7 @@ scroll_active = false
 position = Vector2(0, -17.5)
 sprite_frames = ExtResource("1_fgoj4")
 animation = &"idle"
-frame = 2
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

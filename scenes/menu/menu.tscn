@@ -1,10 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://bpt2hb1tomxi2"]
+[gd_scene load_steps=20 format=3 uid="uid://bpt2hb1tomxi2"]
 
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="1_q7gmv"]
-[ext_resource type="PackedScene" uid="uid://cfynsh1cmj2tb" path="res://scenes/paralax_background/paralax_background.tscn" id="2_wlrp5"]
+[ext_resource type="Script" path="res://scenes/paralax_background/SkyBackground.gd" id="2_lkhie"]
 [ext_resource type="Texture2D" uid="uid://b7804edsrbcqo" path="res://assets/textures/tilesets/tileset.png" id="3_14xbp"]
+[ext_resource type="Texture2D" uid="uid://bdqirpjxdwjde" path="res://assets/textures/background/CloudsBack.png" id="3_pw80o"]
+[ext_resource type="Texture2D" uid="uid://l8lr1payjnbx" path="res://assets/textures/background/CloudsFront.png" id="4_tsfbw"]
 [ext_resource type="FontFile" uid="uid://bu638ev4rorqq" path="res://assets/fonts/ThaleahFat.ttf" id="4_vm2ku"]
 [ext_resource type="Theme" uid="uid://ccjdu7nrsjjwa" path="res://assets/fonts/font_theme.tres" id="4_ylmq2"]
+[ext_resource type="Texture2D" uid="uid://bu5vu7emei201" path="res://assets/textures/background/BGBack.png" id="5_i40om"]
+[ext_resource type="Texture2D" uid="uid://b58tsnfpdids5" path="res://assets/textures/background/BGFront.png" id="6_dr4q5"]
 [ext_resource type="AudioStream" uid="uid://btc5kqyoeupqn" path="res://assets/audio/music_menu_CREDIT_Trevor_Kentz.mp3" id="6_ulpo8"]
 [ext_resource type="PackedScene" uid="uid://cjqvmxsqpukj4" path="res://scenes/credits/credits.tscn" id="7_plg4r"]
 
@@ -173,8 +177,42 @@ Button/styles/pressed = SubResource("StyleBoxFlat_fwq61")
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_q7gmv")
 
-[node name="ParalaxBackground" parent="." instance=ExtResource("2_wlrp5")]
-position = Vector2(96, 37)
+[node name="SkyBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("2_lkhie")
+
+[node name="SkyBack" type="ParallaxLayer" parent="SkyBackground"]
+motion_scale = Vector2(0.1, 0)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="SkyBackground/SkyBack"]
+position = Vector2(64, 64)
+texture = ExtResource("3_pw80o")
+
+[node name="SkyFront" type="ParallaxLayer" parent="SkyBackground"]
+motion_scale = Vector2(0.5, 0)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="SkyBackground/SkyFront"]
+position = Vector2(64, 64)
+texture = ExtResource("4_tsfbw")
+
+[node name="MountainsBackground" type="ParallaxBackground" parent="."]
+
+[node name="BackMountains" type="ParallaxLayer" parent="MountainsBackground"]
+motion_scale = Vector2(0.015, 0)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="MountainsBackground/BackMountains"]
+position = Vector2(64, 35)
+texture = ExtResource("5_i40om")
+
+[node name="FrontMountains" type="ParallaxLayer" parent="MountainsBackground"]
+motion_scale = Vector2(0.03, 0)
+motion_mirroring = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="MountainsBackground/FrontMountains"]
+position = Vector2(64, 35)
+texture = ExtResource("6_dr4q5")
 
 [node name="TitleNameMap" type="TileMap" parent="."]
 position = Vector2(-2, 2)
