@@ -320,6 +320,7 @@ position = Vector2(5600, 176.5)
 [node name="SkyBackground" type="ParallaxBackground" parent="."]
 offset = Vector2(64, 64)
 transform = Transform2D(1, 0, 0, 1, 64, 64)
+scroll_base_scale = Vector2(0, 0)
 script = ExtResource("3_kf0ie")
 
 [node name="SkyBack" type="ParallaxLayer" parent="SkyBackground"]
